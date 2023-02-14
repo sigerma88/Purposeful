@@ -1,5 +1,6 @@
 package ca.mcgill.purposeful.controller;
 
+import ca.mcgill.purposeful.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -7,18 +8,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ca.mcgill.purposeful.service.LoginService;
-
-/**
- * API for authenticating users when they log in
- */
-
+/** API for authenticating users when they log in */
 @RestController
 @RequestMapping({"/login", "/login/"})
 public class LoginController {
 
-  @Autowired
-  LoginService loginService;
+  @Autowired LoginService loginService;
 
   /**
    * This methods takes in a username and and password of a user, and authenticates them The
@@ -36,5 +31,4 @@ public class LoginController {
     String token = loginService.generateToken(authentication);
     return token;
   }
-
 }

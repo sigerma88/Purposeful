@@ -1,10 +1,6 @@
 package ca.mcgill.purposeful.model;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import org.hibernate.annotations.GenericGenerator;
+import ca.mcgill.purposeful.configuration.Authority;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
@@ -19,12 +15,12 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import org.hibernate.annotations.GenericGenerator;
 
-import ca.mcgill.purposeful.configuration.Authority;
-
-/**
- * The AppUser class, the model for all accounts in the database
- */
+/** The AppUser class, the model for all accounts in the database */
 @Entity
 public class AppUser {
 
@@ -61,20 +57,25 @@ public class AppUser {
   private List<Role> roles;
 
   @ManyToMany(fetch = FetchType.EAGER)
-  @JoinTable(name = "app_user_domain", joinColumns = @JoinColumn(name = "app_user_id"), inverseJoinColumns = @JoinColumn(name = "domain_id"))
+  @JoinTable(
+      name = "app_user_domain",
+      joinColumns = @JoinColumn(name = "app_user_id"),
+      inverseJoinColumns = @JoinColumn(name = "domain_id"))
   private Set<Domain> domains;
 
   // Interests are minimum 2 (2..*). This is enforced in the controller
   @ManyToMany(fetch = FetchType.EAGER)
-  @JoinTable(name = "app_user_topic", joinColumns = @JoinColumn(name = "app_user_id"), inverseJoinColumns = @JoinColumn(name = "topic_id"))
+  @JoinTable(
+      name = "app_user_topic",
+      joinColumns = @JoinColumn(name = "app_user_id"),
+      inverseJoinColumns = @JoinColumn(name = "topic_id"))
   private Set<Topic> interests;
 
   // ------------------------
   // AppUser Constructor
   // ------------------------
 
-  public AppUser() {
-  }
+  public AppUser() {}
 
   // ------------------------
   // Getter/Setter Methods

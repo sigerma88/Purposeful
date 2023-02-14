@@ -4,9 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-/**
- * The VerificationRequest class, the model for all verification requests in the database
- */
+/** The VerificationRequest class, the model for all verification requests in the database */
 @Entity
 public class VerificationRequest {
 
@@ -15,15 +13,16 @@ public class VerificationRequest {
   // ------------------------
 
   public enum Status {
-    Pending, Approved, Refused
+    Pending,
+    Approved,
+    Refused
   }
 
   // ------------------------
   // VerificationRequest Attributes
   // ------------------------
 
-  @Id
-  private String companyOuiNumber;
+  @Id private String companyOuiNumber;
 
   @Column(nullable = false)
   private String companyName;
@@ -41,8 +40,7 @@ public class VerificationRequest {
   // VerificationRequest Constructor
   // ------------------------
 
-  public VerificationRequest() {
-  }
+  public VerificationRequest() {}
 
   // ------------------------
   // Getter/Setter Methods

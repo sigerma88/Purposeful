@@ -7,14 +7,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import java.util.Date;
-//import java.sql.Date;
-//import java.sql.Time;
-
 import org.hibernate.annotations.GenericGenerator;
 
-/**
- * The Reaction class, the model for all reactions in the database
- */
+/** The Reaction class, the model for all reactions in the database */
 @Entity
 public class Reaction {
 
@@ -59,8 +54,7 @@ public class Reaction {
   // Reaction Constructor
   // ------------------------
 
-  public Reaction() {
-  }
+  public Reaction() {}
 
   // ------------------------
   // Getter/Setter Methods

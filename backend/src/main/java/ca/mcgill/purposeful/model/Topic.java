@@ -1,17 +1,12 @@
 package ca.mcgill.purposeful.model;
 
-import java.util.Set;
-
-import org.hibernate.annotations.GenericGenerator;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import org.hibernate.annotations.GenericGenerator;
 
-/**
- * The Topic class, the model for topics in the database
- */
+/** The Topic class, the model for topics in the database */
 @Entity
 public class Topic {
 
@@ -31,8 +26,7 @@ public class Topic {
   // Topic Constructor
   // ------------------------
 
-  public Topic() {
-  }
+  public Topic() {}
 
   // ------------------------
   // Getter/Setter Methods

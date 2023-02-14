@@ -1,7 +1,5 @@
 package ca.mcgill.purposeful.model;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -13,16 +11,14 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
-//import java.sql.Date;
-//import java.sql.Time;
+import org.hibernate.annotations.GenericGenerator;
+// import java.sql.Date;
+// import java.sql.Time;
 
-/**
- * The Idea class, the model for all ideas in the database
- */
+/** The Idea class, the model for all ideas in the database */
 @Entity
 public class Idea {
 
@@ -63,15 +59,24 @@ public class Idea {
   // ------------------------
 
   @ManyToMany
-  @JoinTable(name = "idea_domain", joinColumns = @JoinColumn(name = "idea_id"), inverseJoinColumns = @JoinColumn(name = "url_id"))
+  @JoinTable(
+      name = "idea_domain",
+      joinColumns = @JoinColumn(name = "idea_id"),
+      inverseJoinColumns = @JoinColumn(name = "url_id"))
   private Set<Domain> domains;
 
   @ManyToMany
-  @JoinTable(name = "idea_topic", joinColumns = @JoinColumn(name = "idea_id"), inverseJoinColumns = @JoinColumn(name = "topic_id"))
+  @JoinTable(
+      name = "idea_topic",
+      joinColumns = @JoinColumn(name = "idea_id"),
+      inverseJoinColumns = @JoinColumn(name = "topic_id"))
   private Set<Topic> topics;
 
   @ManyToMany
-  @JoinTable(name = "idea_technology", joinColumns = @JoinColumn(name = "idea_id"), inverseJoinColumns = @JoinColumn(name = "technology_id"))
+  @JoinTable(
+      name = "idea_technology",
+      joinColumns = @JoinColumn(name = "idea_id"),
+      inverseJoinColumns = @JoinColumn(name = "technology_id"))
   private Set<Technology> techs;
 
   @ManyToOne(optional = false)
@@ -90,8 +95,7 @@ public class Idea {
   // Idea Constructor
   // ------------------------
 
-  public Idea() {
-  }
+  public Idea() {}
 
   // ------------------------
   // Getter/Setter Methods

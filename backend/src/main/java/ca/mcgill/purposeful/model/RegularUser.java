@@ -5,9 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 
-/**
- * The RegularUser class, the model for accounts with regular user authority in the database
- */
+/** The RegularUser class, the model for accounts with regular user authority in the database */
 @Entity
 public class RegularUser extends Role {
 
@@ -30,8 +28,7 @@ public class RegularUser extends Role {
   // RegularUser Constructor
   // ------------------------
 
-  public RegularUser() {
-  }
+  public RegularUser() {}
 
   // ------------------------
   // Getter/Setter Methods

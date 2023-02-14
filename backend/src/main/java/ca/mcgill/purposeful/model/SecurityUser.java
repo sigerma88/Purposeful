@@ -1,12 +1,11 @@
 package ca.mcgill.purposeful.model;
 
+import ca.mcgill.purposeful.configuration.Authority;
 import java.util.ArrayList;
 import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
-import ca.mcgill.purposeful.configuration.Authority;
 
 /**
  * Secure User class that Spring can read, which wraps the AppUser class Makes AppUser compatible

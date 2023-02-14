@@ -1,17 +1,12 @@
 package ca.mcgill.purposeful.model;
 
-import java.util.Set;
-
-import org.hibernate.annotations.GenericGenerator;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import org.hibernate.annotations.GenericGenerator;
 
-/**
- * The Domain class, the model for domains in the database
- */
+/** The Domain class, the model for domains in the database */
 @Entity
 public class Domain {
 
@@ -31,8 +26,7 @@ public class Domain {
   // Domain Constructor
   // ------------------------
 
-  public Domain() {
-  }
+  public Domain() {}
 
   // ------------------------
   // Getter/Setter Methods
