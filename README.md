@@ -19,8 +19,9 @@ Abe Arafat
 Thibaut Baguette  
 
 ## Technologies
-React.js for the front-end  
-Spring-boot framework for the back-end  
+React.js and Next.js with JavaScript for the front-end  
+Spring-boot framework with Java for the back-end  
+Acceptance tests done with Cucumber Gherkin and automated with GitHub Actions  
 
 ## Wiki
 For more information on this project, please consult our [wiki](https://github.com/WassimJabz/Purposeful/wiki).  
